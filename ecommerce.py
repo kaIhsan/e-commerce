@@ -1,4 +1,4 @@
-# ecommerce.py - ULTRA SINGKAT
+# ecommerce.py
 from logic import TreeNode, GeneralTree
 
 class EcommerceCatalog(GeneralTree):

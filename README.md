@@ -136,6 +136,10 @@ http://localhost:8501
 - Total produk, kategori, node, dan kedalaman tree
 - Total nilai inventori dan total stok
 
+### 🔍 Tab Cari
+- Mencari produk berdasarkan nama menggunakan algoritma **DFS** dari `find_node()`
+- Menampilkan detail produk: nama, harga, dan stok jika ditemukan
+
 ---
 
 ## 🔍 Detail Implementasi Teknis

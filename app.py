@@ -5,6 +5,8 @@ from ecommerce import EcommerceCatalog
 
 st.set_page_config(layout="wide", page_title="E-Commerce Catalog", page_icon="🛒")
 st.title("🛒 E-Commerce Catalog Manager")
+st.caption("Struktur Data: General Tree | UAS Struktur Data (INF62305)")
+st.markdown("**Manajemen katalog e-commerce dengan hierarki kategori**")
 
 # Inisialisasi
 if 'catalog' not in st.session_state:
@@ -39,7 +41,7 @@ with st.sidebar:
     st.metric("📦 Total Stok", stats['total_stock'])
 
 # Tabs
-tab1, tab2, tab3 = st.tabs(["➕ Tambah", "🗑️ Hapus", "📊 Visualisasi"])
+tab1, tab2, tab3, tab4 = st.tabs(["➕ Tambah", "🗑️ Hapus", "📊 Visualisasi", "🔍 Cari"])
 
 # TAB 1: Tambah
 with tab1:
@@ -103,6 +105,20 @@ with tab3:
     dot.attr(rankdir='TB')
     fs.generate_graphviz_structure(dot)
     st.graphviz_chart(dot, use_container_width=True)
+
+# TAB 4:Search
+with tab4:
+    st.header("Cari Produk")
+    keyword = st.text_input("Nama produk:")
+    if keyword:
+        node = fs.find_node(fs.root, keyword)
+        if node and node.node_type == "Produk":
+            st.success(f"✅ Ditemukan!")
+            st.write(f"*Nama:* {node.name}")
+            st.write(f"*Harga:* Rp {node.data['harga']:,}")
+            st.write(f"*Stok:* {node.data['stok']}")
+        else:
+            st.error("❌ Produk tidak ditemukan.")
 
 st.divider()
 st.caption("General Tree Implementation | UAS Struktur Data")

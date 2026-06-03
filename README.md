@@ -127,6 +127,12 @@ http://localhost:8501
 - Menghapus kategori otomatis menghapus semua anak di dalamnya (**cascade delete**)
 - Konfirmasi checkbox sebelum penghapusan
 
+### 🔍 Tab Cari
+- Mencari produk berdasarkan nama
+- Menggunakan algoritma DFS (Depth First Search) melalui method `find_node()`
+- Menampilkan nama, harga, dan stok produk yang ditemukan
+- Menampilkan pesan jika produk tidak ditemukan
+
 ### 📊 Tab Visualisasi
 - Menampilkan **tree secara visual** menggunakan Graphviz
 - Warna berbeda untuk Root 🏠, Kategori 📁, dan Produk 🟢
@@ -136,17 +142,18 @@ http://localhost:8501
 - Total produk, kategori, node, dan kedalaman tree
 - Total nilai inventori dan total stok
 
-### 🔍 Tab Cari
-- Mencari produk berdasarkan nama menggunakan algoritma **DFS** dari `find_node()`
-- Menampilkan detail produk: nama, harga, dan stok jika ditemukan
-
 ---
 
 ## 🔍 Detail Implementasi Teknis
 
-### Traversal: Depth-First Search (DFS)
+### Pencarian Node Menggunakan DFS (Depth First Search)
 
-Pencarian node menggunakan algoritma DFS secara rekursif:
+Aplikasi menggunakan algoritma DFS (Depth First Search) pada method `find_node()` untuk mencari node dalam struktur General Tree. Algoritma ini menelusuri node dari root hingga ke cabang terdalam secara rekursif sampai data yang dicari ditemukan.
+
+Method ini digunakan untuk:
+- Mencari produk pada fitur **Tab Cari**
+- Mencari parent saat proses penambahan kategori atau produk
+- Validasi keberadaan node sebelum operasi insert dan delete
 
 ```python
 def find_node(self, current_node, name):
@@ -176,7 +183,7 @@ if 'catalog' not in st.session_state:
 
 ## 👥 Anggota Kelompok
 
-| No | Nama                          | NIM        |
+| No | Nama | NIM |
 |----|-------------------------------|------------|
 | 1  | Khalilullah Al Ihsan          | 2530801034 |
 | 2  | Nadya Athalia Diva            | 2530801029 |

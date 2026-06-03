@@ -39,7 +39,7 @@ with st.sidebar:
     st.metric("📦 Total Stok", stats['total_stock'])
 
 # Tabs
-tab1, tab2, tab3 = st.tabs(["➕ Tambah", "🗑️ Hapus", "📊 Visualisasi"])
+tab1, tab2, tab3, tab4 = st.tabs(["➕ Tambah", "🗑️ Hapus", "🔍 Cari" "📊 Visualisasi"])
 
 # TAB 1: Tambah
 with tab1:
@@ -96,8 +96,23 @@ with tab2:
                 else:
                     st.error("Centang dulu")
 
-# TAB 3: Visualisasi
 with tab3:
+    st.header("Cari Produk")
+    keyword = st.text_input("Nama produk:")
+    if keyword:
+        node = fs.find_node(fs.root, keyword)
+        if node and node.node_type == "Produk":
+            st.success(f"✅ Ditemukan!")
+            st.write(f"*Nama:* {node.name}")
+            st.write(f"*Harga:* Rp {node.data['harga']:,}")
+            st.write(f"*Stok:* {node.data['stok']}")
+        else:
+            st.error("❌ Produk tidak ditemukan.")
+
+
+
+# TAB 4: Visualisasi
+with tab4:
     st.header("Visualisasi Tree")
     dot = graphviz.Digraph(engine="dot")
     dot.attr(rankdir='TB')

@@ -119,11 +119,10 @@ Sesuai dengan standar pengembangan perangkat lunak di industri, proyek ini dikel
 ## 📥 1. Cara Menyalin Proyek (Clone)
 Bagi Anda yang ingin menguji, menjalankan, atau meninjau seluruh baris kode aplikasi ini di perangkat lokal masing-masing, ikuti perintah berikut pada terminal atau Git Bash:
 
-Bash
 ### 1. Melakukan clone repositori proyek
 ```bash
-    git clone https://github.com/khalilullahalihsan/materi-kuliah.git
-    cd materi-kuliah
+    git clone https://github.com/kaIhsan/e-commerce.git
+    cd e-commerce
     streamlit run app.py
  ```
 

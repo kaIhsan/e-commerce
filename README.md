@@ -88,13 +88,13 @@ Kelas utama yang menyimpan root dan menyediakan operasi-operasi dasar:
 
 Pastikan Python sudah terinstal (Python 3.8+). Cek dengan:
 ```bash
-python --version
+    python --version
 ```
 
 ### 2. Instalasi Dependensi
 
 ```bash
-pip install streamlit graphviz
+    pip install streamlit graphviz
 ```
 
 > **Catatan:** Untuk visualisasi Graphviz, instal juga program Graphviz di sistem:
@@ -105,12 +105,12 @@ pip install streamlit graphviz
 ### 3. Jalankan Aplikasi
 
 ```bash
-streamlit run app.py
+    streamlit run app.py
 ```
 
 Aplikasi akan terbuka otomatis di browser pada alamat:
 ```
-http://localhost:8501
+    http://localhost:8501
 ```
 
 ## 🛠️ Alur Pengembangan dan Kolaborasi (Git Workflow)
@@ -129,13 +129,13 @@ Bagi Anda yang ingin menguji, menjalankan, atau meninjau seluruh baris kode apli
 ### 2. Masuk ke dalam direktori/folder proyek yang telah di-clone
 
 ```bash
-cd materi-kuliah
+    cd e-commerce
 ```
 
 ### 3. Pastikan dependensi sudah terinstall, lalu jalankan program
 
 ```bash
-streamlit run app.py
+    streamlit run app.py
 ```
 
 ## 🤝 2. Cara Berkontribusi (Contribute)
@@ -148,19 +148,20 @@ Kami menerapkan alur kerja Fork & Pull Request Workflow untuk memastikan setiap 
 ### 3. Buat Branch Baru yang spesifik untuk fitur atau perbaikan yang akan Anda kerjakan agar tidak mengganggu branch utama (main):
 
 ```Bash
-git checkout -b fitur-baru-anda
+    git checkout -b fitur-baru-anda
 ```
 
 ### 4. **Lakukan Perubahan** pada file kode program Anda secara rapi (terapkan prinsip OOP dan *Separation of Concerns*).
 ### 5. **Simpan dan Commit** perubahan kode Anda dengan menyertakan pesan commit yang jelas dan deskriptif:
-   ```bash
-   git add .
+```bash
+   git add . 
    git commit -m "feat: menambahkan validasi dinamis input produk pada app.py"
-Push Branch tersebut ke repositori fork di akun GitHub Anda:
 ```
 
+Push Branch tersebut ke repositori fork di akun GitHub Anda:
+
 ```Bash
-git push origin fitur-baru-anda
+    git push origin fitur-baru-anda
 ```
 
 ### 7. **Buat Pull Request (PR)** melalui antarmuka GitHub dari branch repositori Anda ke branch `main` repositori utama kami. Tim kami akan meninjau (*code review*) kontribusi Anda sebelum melakukan *merge*.

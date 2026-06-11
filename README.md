@@ -145,7 +145,7 @@ Kami menerapkan alur kerja Fork & Pull Request Workflow untuk memastikan setiap 
 
 ### 3. Buat Branch Baru yang spesifik untuk fitur atau perbaikan yang akan Anda kerjakan agar tidak mengganggu branch utama (main):
 
-```Bash
+```bash
 git checkout -b fitur-baru-anda
 ```
 
@@ -158,7 +158,7 @@ git commit -m "feat: menambahkan validasi dinamis input produk pada app.py"
 
 ### Push Branch tersebut ke repositori fork di akun GitHub Anda:
 
-```Bash
+```bash
 git push origin fitur-baru-anda
 ```
 
